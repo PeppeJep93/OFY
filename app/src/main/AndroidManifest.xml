@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <manifest package="oneforyou.jep.oneforyou" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application android:theme="@style/AppTheme" android:supportsRtl="true" android:roundIcon="@mipmap/ic_launcher_round" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="true" android:usesCleartextTraffic="true">
+
+
+    <activity android:name=".View.OtherViews.PaginaSplash" android:label="@string/app_name" android:screenOrientation="portrait">
+
+
+    <intent-filter>
+
+    <action android:name="android.intent.action.MAIN"/>
+
+    <category android:name="android.intent.category.LAUNCHER"/>
+
+</intent-filter>
+
+</activity>
+
+
+    <activity android:name=".View.OtherViews.PaginaLogin" android:screenOrientation="portrait">
+
+
+    <intent-filter>
+
+    <category android:name="android.intent.category.LAUNCHER"/>
+
+</intent-filter>
+
+</activity>
+
+    <activity android:name=".View.ViewUser.PaginaHome" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaDettaglioScommessa" android:screenOrientation="portrait" android:noHistory="true"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaTutorial" android:screenOrientation="portrait" android:noHistory="true"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaDashboard" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.OtherViews.PaginaRegistrazione" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.OtherViews.PaginaRecuperoPassword" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaAltroUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaGiocaUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaAccountUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaScommetteUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaStatsUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaUtentiUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewUser.PaginaPremiUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaGestionePartite" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaInserisciPartita" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaModificaPartita" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaAggiornaEliminaPartita" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaPubblicaRisultati" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaProfiloUtente" android:screenOrientation="portrait"> </activity>
+
+    <activity android:name=".View.ViewAdmin.PaginaGestioneUtenti" android:screenOrientation="portrait"> </activity>
+
+</application>
+
+</manifest>

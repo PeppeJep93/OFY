@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewUser.PaginaDettaglioScommessa">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:fontFamily="@font/cr"
+            android:textSize="18dp"
+            android:text="USERNAME" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_below="@id/username"
+            android:layout_toEndOf="@id/immagine"
+            android:id="@+id/saldo"
+            android:textSize="18dp"
+            android:fontFamily="@font/cr"
+            android:text="SALDO" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/riga"
+        android:layout_width="match_parent"
+        android:layout_below="@id/app"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/squadre"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/squadra1"
+                android:background="@color/blucc"
+                android:text="AAAAAAAAAA"
+                android:gravity="right"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/cb"
+                >
+            </TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/squadra2"
+                android:background="@color/rossocc"
+                android:text="BBBBBBBBB"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/cb"
+                >
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/datapartita"
+            android:layout_below="@id/squadre"
+            android:text="CCCCCCCC"
+            android:textSize="20dp"
+            android:fontFamily="@font/cr"
+            >
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/riga"
+        android:layout_marginBottom="75dp"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:id="@+id/quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/infouno"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UNO"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/quotauno"
+                        android:textColor="@color/neros"
+                        android:background="@color/trasp"
+                        android:fontFamily="@font/cr"
+                        android:textSize="25dp"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ALTRI UNO"
+                        android:layout_below="@id/quotauno"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/altriuno"
+                        android:fontFamily="@font/cb"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AMICI UNO"
+                        android:layout_below="@id/altriuno"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="vediListaAmici"
+                        android:id="@+id/amiciuno"
+                        android:fontFamily="@font/cb"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listauno"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/cb"
+                        android:layout_below="@id/amiciuno"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/infoics"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ICS"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/quotaics"
+                        android:textColor="@color/neros"
+                        android:background="@color/trasp"
+                        android:fontFamily="@font/cr"
+                        android:textSize="25dp"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ALTRI ICS"
+                        android:layout_below="@id/quotaics"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/altriics"
+                        android:fontFamily="@font/cb"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AMICI ICS"
+                        android:layout_below="@id/altriics"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="vediListaAmici"
+                        android:id="@+id/amiciics"
+                        android:fontFamily="@font/cb"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listaics"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/amiciics"
+                        android:fontFamily="@font/cb"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/infodue"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DUE"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/quotadue"
+                        android:textColor="@color/neros"
+                        android:background="@color/trasp"
+                        android:fontFamily="@font/cr"
+                        android:textSize="25dp"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ALTRI DUE"
+                        android:layout_below="@id/quotadue"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/altridue"
+                        android:fontFamily="@font/cb"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AMICI DUE"
+                        android:layout_below="@id/altridue"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="vediListaAmici"
+                        android:id="@+id/amicidue"
+                        android:fontFamily="@font/cb"
+                        >
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listadue"
+                        android:fontFamily="@font/cb"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/amicidue"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoscommessa"
+            android:layout_alignParentBottom="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCOMMESSA"
+                android:fontFamily="@font/cb"
+                android:id="@+id/esitoscommessa"
+                android:layout_centerHorizontal="true"
+                >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/esitoscommessafoto"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/esitoscommessa"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RISULTATO PARTITA"
+                android:id="@+id/risultatopartita"
+                android:fontFamily="@font/cb"
+                android:layout_below="@id/esitoscommessafoto"
+                android:layout_centerHorizontal="true"
+                >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOL CASA - GOL OSPITE"
+                android:textSize="30dp"
+                android:id="@+id/punteggiopartita"
+                android:fontFamily="@font/cb"
+                android:layout_below="@id/risultatopartita"
+                android:layout_centerHorizontal="true"
+                >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VINCITA"
+                android:textSize="25dp"
+                android:id="@+id/vincita"
+                android:fontFamily="@font/cb"
+                android:layout_below="@id/punteggiopartita"
+                android:layout_centerHorizontal="true"
+                >
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/barramenu"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centrovuoto"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce2"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce2a"
+                android:onClick="passasezione"
+                android:background="@drawable/statistiche"
+                >
+
+            </Button>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce1"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/voce2"
+            android:layout_marginRight="5dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce1a"
+                android:onClick="passasezione"
+                android:background="@drawable/gioca1"
+                >
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:id="@+id/voce3"
+            android:onClick="passasezione">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce3a"
+                android:onClick="passasezione"
+                android:background="@drawable/amici1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/voce4"
+            android:onClick="passasezione"
+            android:layout_toRightOf="@id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/voce4a"
+                android:background="@drawable/premi1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+
+
+</RelativeLayout>

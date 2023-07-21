@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewAdmin.PaginaGestionePartite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cb"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:textSize="20dp"
+            android:text="USERNAME" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app"
+        android:layout_marginBottom="100dp"
+        >
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:background="@color/rosso"
+            android:layout_height="match_parent" >
+
+            <TableRow
+                android:id="@+id/tableRow0"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/button1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="vaiattivita"
+                    android:background="@drawable/pulsantimenu"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/button1a"
+                        android:onClick="vaiattivita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <Button
+                            android:id="@+id/button1b"
+                            android:onClick="vaiattivita"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/aggiorna"
+                            android:alpha="0.5"
+                            >
+                        </Button>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/cb"
+                            android:layout_below="@id/button1b"
+                            android:textColor="@color/scuro"
+                            android:text="AGGIORNA ELIMINA PARTITA">
+                        </TextView>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/button2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pulsantimenu"
+                    android:onClick="vaiattivita"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/button2a"
+                        android:onClick="vaiattivita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <Button
+                            android:id="@+id/button2b"
+                            android:onClick="vaiattivita"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/modifica"
+                            android:alpha="0.5"
+                            >
+                        </Button>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/cb"
+                            android:layout_below="@id/button2b"
+                            android:textColor="@color/scuro"
+                            android:text="PUBBLICA RISULTATI">
+                        </TextView>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/pulsantimenu"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/button3"
+                    android:layout_height="fill_parent"
+                    android:onClick="vaiattivita"
+                    android:layout_weight="1" >
+                    <RelativeLayout
+                        android:id="@+id/button3a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="vaiattivita"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/inserimento"
+                            android:onClick="vaiattivita"
+                            android:alpha="0.5"
+                            android:id="@+id/button3b"
+                            >
+                        </Button>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textSize="25dp"
+                            android:fontFamily="@font/cb"
+                            android:layout_below="@id/button3b"
+                            android:textColor="@color/scuro"
+                            android:text="INSERISCI PARTITA">
+                        </TextView>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/barramenusotto"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/centrovuoto"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="25dp"
+            android:onClick="passasezione"
+            android:id="@+id/buttonpartite1"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonpartite2"
+                android:background="@drawable/calendario"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:onClick="passasezione"
+            android:id="@+id/buttonutenti1"
+            android:layout_marginRight="25dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonutenti2"
+                android:background="@drawable/utenti1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+
+</RelativeLayout>

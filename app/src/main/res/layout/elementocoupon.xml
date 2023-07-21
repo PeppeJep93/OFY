@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/riga">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SERVIZIO"
+        android:fontFamily="@font/cb"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/servizio"
+        >
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valore"
+        android:text="VALORE"
+        android:fontFamily="@font/cb"
+        android:layout_centerHorizontal="true"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/cb"
+        android:text="COSTO "
+        android:id="@+id/costo"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valore"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/cb"
+        android:text="DATA "
+        android:id="@+id/data"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/data"
+        android:textSize="25dp"
+        android:textColor="@color/biancos"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/cb"
+        android:text="CODICE "
+        android:id="@+id/codice"
+        >
+    </TextView>
+</RelativeLayout>

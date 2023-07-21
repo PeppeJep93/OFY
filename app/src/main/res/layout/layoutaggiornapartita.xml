@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewAdmin.PaginaAggiornaEliminaPartita">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cb"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:textSize="20dp"
+            android:text="USERNAME" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app"
+        android:layout_marginBottom="100dp"
+        >
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textColor="@color/neros"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/zeropartite"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listviewAggiornamento"
+                    >
+                </ListView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/barramenusotto"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/centrovuoto"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="25dp"
+            android:onClick="passasezione"
+            android:id="@+id/buttonpartite1"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonpartite2"
+                android:background="@drawable/calendario"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:onClick="passasezione"
+            android:id="@+id/buttonutenti1"
+            android:layout_marginRight="25dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonutenti2"
+                android:background="@drawable/utenti1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azzurro">#590180B1</color>
+    <color name="blu">#59002B5F</color>
+    <color name="giallo">#59F1B908</color>
+    <color name="rosso">#59FF0408</color>
+    <color name="verde">#592DA303</color>
+    <color name="granata">#59862B21</color>
+    <color name="arancione">#59D88100</color>
+    <color name="viola">#5984039B</color>
+    <color name="bianco">#59D3D3D3</color>
+    <color name="nero">#597E7E7E</color>
+
+    <color name="azzurros">#0180B1</color>
+    <color name="blus">#002B5F</color>
+    <color name="giallos">#F1B908</color>
+    <color name="rossos">#FF0408</color>
+    <color name="verdes">#2DA303</color>
+    <color name="granatas">#862B21</color>
+    <color name="aranciones">#D88100</color>
+    <color name="violas">#84039B</color>
+    <color name="biancos">#FFFFFF</color>
+    <color name="neros">#000000</color>
+
+    <color name="azzurroc">#D8EBFD</color>
+    <color name="bluc">#C2CDDD</color>
+    <color name="gialloc">#E9D4AE</color>
+    <color name="rossoc">#FFBEC1</color>
+    <color name="verdec">#AECC9C</color>
+    <color name="granatac">#DFC2C2</color>
+    <color name="arancionec">#FAD5AA</color>
+    <color name="violac">#D2ADDB</color>
+    <color name="biancoc">#D3D3D3</color>
+    <color name="neroc">#7E7E7E</color>
+
+    <color name="azzurrocc">#340091FF</color>
+    <color name="blucc">#330044D8</color>
+    <color name="giallocc">#33FFDB00</color>
+    <color name="rossocc">#33FF0E00</color>
+    <color name="verdecc">#3300FF00</color>
+    <color name="granatacc">#33C44343</color>
+    <color name="arancionecc">#33FF6C00</color>
+    <color name="violacc">#33C971D8</color>
+    <color name="biancocc">#33D3D3D3</color>
+    <color name="nerocc">#337E7E7E</color>
+
+    <color name="oscurato">#81000000</color>
+    <color name="chiaro">#FFFFFF</color>
+    <color name="scuro">#000000</color>
+    <color name="trasp">#00FFFFFF</color>
+
+</resources>

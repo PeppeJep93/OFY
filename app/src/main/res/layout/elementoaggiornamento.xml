@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/riga">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/squadre"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/squadra1"
+            android:background="@color/blucc"
+            android:text="AAAAAAAAAA"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:fontFamily="@font/cb"
+            >
+        </TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/squadra2"
+            android:background="@color/rossocc"
+            android:text="BBBBBBBBB"
+            android:layout_weight="1"
+            android:fontFamily="@font/cb"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/datapartita"
+        android:layout_below="@id/squadre"
+        android:text="CCCCCCCC"
+        android:fontFamily="@font/cr"
+        >
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datapartita">
+
+    <RelativeLayout
+        android:id="@+id/primoRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageViewAggiorna"
+            android:background="@drawable/modifica"
+            android:onClick="aggiornaPartita"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+        <TextView
+            android:text="AGGIORNA"
+            android:id="@+id/textRelativeSinistro"
+            android:layout_width="wrap_content"
+            android:onClick="aggiornaPartita"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cb"
+            android:layout_toRightOf="@id/imageViewAggiorna"/>
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/secondoRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" >
+
+            <ImageView
+                android:id="@+id/imageViewElimina"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/elimina"
+                android:onClick="eliminaPartita"/>
+
+            <TextView
+                android:id="@+id/textRelativeDestro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/imageViewElimina"
+                android:fontFamily="@font/cb"
+                android:onClick="eliminaPartita"
+                android:text="ELIMINA" />
+
+        </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+</RelativeLayout>

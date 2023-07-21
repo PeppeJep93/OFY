@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/prova"
+    tools:context=".View.ViewUser.PaginaTutorial">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pagina"
+        android:layout_marginBottom="50dp">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gialloc"
+        android:layout_height="50dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SALTA"
+            android:textColor="@color/biancos"
+            android:background="@color/verdes"
+            android:layout_centerHorizontal="true"
+            android:onClick="passaiscrizione"
+            android:id="@+id/fine"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INDIETRO"
+            android:background="@color/rossoc"
+           android:layout_toLeftOf="@id/fine"
+            android:onClick="cambiaimmagine"
+            android:id="@+id/indietro"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AVANTI"
+            android:background="@color/azzurroc"
+            android:layout_toRightOf="@id/fine"
+            android:onClick="cambiaimmagine"
+            android:id="@+id/avanti"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

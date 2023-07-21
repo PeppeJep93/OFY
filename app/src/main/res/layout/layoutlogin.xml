@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Login">
+
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_centerInParent="true"
+        android:background="@drawable/login"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondoinizialeverticale">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondoinizialeorizzontale">
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fittizio"
+        >
+    </TextView>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_below="@id/fittizio"
+        android:background="#55ffffff"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sfondodati">
+
+        <TextView
+            android:id="@+id/accedi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Accedi a OneForYou!"
+            android:layout_marginTop="2.5dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/chiaro"
+            android:shadowRadius="9"
+            android:shadowColor="@color/scuro"
+            android:shadowDx="1"
+            android:shadowDy="1"/>
+
+        <EditText
+            android:id="@+id/inserisciuser"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:letterSpacing="0.25"
+            android:textCursorDrawable="@drawable/matita2"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:hint="USERNAME"
+            android:textColor="@color/scuro"
+            android:fontFamily="@font/cb"
+            android:layout_below="@+id/accedi"
+            android:nextFocusForward="@+id/pass"
+            android:background="@drawable/edittextsopra" />
+
+        <EditText
+            android:id="@+id/inseriscipass"
+            android:password="true"
+            android:background="@drawable/edittextsotto"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:textAlignment="center"
+            android:textCursorDrawable="@drawable/matita2"
+            android:letterSpacing="0.25"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/scuro"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:hint="PASSWORD"
+            android:fontFamily="@font/cb"
+            android:imeOptions="actionDone"
+            android:layout_below="@+id/inserisciuser" />
+
+        <Button
+            android:id="@+id/premiaccesso"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/scuro"
+            android:layout_below="@+id/inseriscipass"
+            android:layout_centerHorizontal="true"
+            android:onClick="eseguiLogin"
+            android:background="@drawable/arc"
+            android:text="ACCEDI" />
+
+        <TextView
+            android:id="@+id/nonseiiscritto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Non sei iscritto?"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/premiaccesso"
+            android:textSize="17dp"
+            android:textColor="@color/chiaro"
+            android:shadowRadius="9"
+            android:shadowColor="@color/scuro"
+            android:shadowDx="1"
+            android:shadowDy="1"/>
+
+        <Button
+            android:id="@+id/registrati"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:fontFamily="@font/cb"
+            android:layout_below="@+id/nonseiiscritto"
+            android:layout_centerHorizontal="true"
+            android:onClick="passaiscrizione"
+            android:textColor="@color/scuro"
+            android:background="@drawable/arc"
+            android:text="REGISTRATI"
+            />
+
+        <TextView
+            android:id="@+id/recuperaPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Hai dimenticato la password?"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/registrati"
+            android:textSize="17dp"
+            android:textColor="@color/chiaro"
+            android:shadowRadius="9"
+            android:shadowColor="@color/scuro"
+            android:shadowDx="1"
+            android:shadowDy="1"/>
+
+        <Button
+            android:id="@+id/recupero"
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            android:fontFamily="@font/cb"
+            android:layout_below="@+id/recuperaPassword"
+            android:layout_centerHorizontal="true"
+            android:onClick="recuperoPass"
+            android:textColor="@color/scuro"
+            android:background="@drawable/arc"
+            android:text="RECUPERA!"
+            />
+
+    </RelativeLayout>
+
+
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/palla"
+        android:layout_below="@id/fittizio"
+        android:layout_height="75dp"
+        android:layout_width="75dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finto"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/sfondodati"></TextView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/prova"
+    tools:context=".View.ViewAdmin.PaginaDashboard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:id="@+id/username"
+            android:gravity="end"
+            android:textSize="20dp"
+            android:text="USERNAME" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/username"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/username"
+            android:background="@drawable/pulsantimenu"
+            android:layout_toLeftOf="@id/logout"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_below="@id/app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/pulsantimenu"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:onClick="passasezione"
+                android:background="@color/rosso"
+                android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/button1a"
+                android:onClick="passasezione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <Button
+                    android:id="@+id/button1b"
+                    android:onClick="passasezione"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/calendario"
+                    android:alpha="0.5"
+                    >
+                </Button>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/cb"
+                    android:layout_below="@id/button1b"
+                    android:textColor="@color/scuro"
+                    android:text="PARTITE">
+                </TextView>
+
+            </RelativeLayout>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/pulsantimenu"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/button2"
+                android:layout_height="fill_parent"
+                android:background="@color/giallo"
+                android:onClick="passasezione"
+                android:layout_weight="1" >
+            <RelativeLayout
+                android:id="@+id/button2a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:layout_centerInParent="true"
+                >
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/utenti"
+                    android:onClick="passasezione"
+                    android:alpha="0.5"
+                    android:id="@+id/button2b"
+                    >
+                </Button>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/cb"
+                    android:layout_below="@id/button2b"
+                    android:textColor="@color/scuro"
+                    android:text="UTENTI">
+                </TextView>
+            </RelativeLayout>
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewUser.PaginaAltroUtente">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:fontFamily="@font/cr"
+            android:textSize="18dp"
+            android:text="USERNAME" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_below="@id/username"
+            android:layout_toEndOf="@id/immagine"
+            android:id="@+id/saldo"
+            android:textSize="18dp"
+            android:fontFamily="@font/cr"
+            android:text="SALDO" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/barramenu"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centrovuoto"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce2"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce2a"
+                android:onClick="passasezione"
+                android:background="@drawable/statistiche1"
+                >
+
+            </Button>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce1"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/voce2"
+            android:layout_marginRight="5dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce1a"
+                android:onClick="passasezione"
+                android:background="@drawable/gioca"
+                >
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:onClick="passasezione"
+            android:id="@+id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce3a"
+                android:onClick="passasezione"
+                android:background="@drawable/amici1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/voce4"
+            android:onClick="passasezione"
+            android:layout_toRightOf="@id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce4a"
+                android:onClick="passasezione"
+                android:background="@drawable/premi1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app"
+        >
+
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/riga"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:padding="3sp"
+                android:layout_margin="3sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user"
+                    android:fontFamily="@font/cr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/info"
+                    android:fontFamily="@font/cb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/stats"
+                    android:fontFamily="@font/cb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/riga"
+                android:layout_marginBottom="75dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/spazionome"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOME: "
+                        android:textSize="16dp"
+                        android:id="@+id/nome"
+                        android:fontFamily="@font/cl"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:id="@+id/nomeutente"
+                        android:textColor="@color/neros"
+                        android:layout_toRightOf="@id/nome"
+                        android:fontFamily="@font/cb"
+                        android:hint="CIAO">
+
+                    </TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:singleLine="true"
+                        android:id="@+id/nomemodifica"
+                        android:fontFamily="@font/cb"
+                        android:hint="Cambia il tuo nome..."
+                        android:layout_below="@id/nome"
+                        android:visibility="gone">
+                    </EditText>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/spaziocognome"
+                    android:layout_below="@id/spazionome"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COGNOME: "
+                        android:textSize="16dp"
+                        android:id="@+id/cognome"
+                        android:fontFamily="@font/cl"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:id="@+id/cognomeutente"
+                        android:textColor="@color/neros"
+                        android:layout_toRightOf="@id/cognome"
+                        android:fontFamily="@font/cb"
+                        android:hint="CIAO">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/spazioluogo"
+                    android:layout_below="@id/spaziocognome"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LUOGO NASCITA: "
+                        android:textSize="16dp"
+                        android:id="@+id/luogo"
+                        android:fontFamily="@font/cl"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:id="@+id/luogoutente"
+                        android:textColor="@color/neros"
+                        android:layout_toRightOf="@id/luogo"
+                        android:fontFamily="@font/cb"
+                        android:hint="CIAO">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/spaziosesso"
+                    android:layout_below="@id/spazioluogo"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SESSO: "
+                        android:textSize="16dp"
+                        android:id="@+id/sesso"
+                        android:fontFamily="@font/cl"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:id="@+id/sessoutente"
+                        android:textColor="@color/neros"
+                        android:layout_toRightOf="@id/sesso"
+                        android:fontFamily="@font/cb"
+                        android:hint="CIAO">
+
+                    </TextView>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SEGUI I SUOI PRONOSTICI!"
+                        android:id="@+id/seguireutente"
+                        android:layout_below="@id/sessoutente"
+                        android:fontFamily="@font/cb"
+                        android:textColor="@color/biancos"
+                        android:onClick="seguiUtente">
+
+                    </Button>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LASCIA UN LIKE!"
+                        android:layout_below="@id/sessoutente"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/votareutente"
+                        android:fontFamily="@font/cb"
+                        android:visibility="gone"
+                        android:textColor="@color/biancos"
+                        android:onClick="votaUtente">
+
+                    </Button>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seguireutente"
+                        android:id="@+id/storico"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/cb"
+                        android:text="STORICO SCOMMESSE"
+                        android:layout_centerHorizontal="true"
+                        >
+                    </TextView>
+
+
+                    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/storico"
+                        android:fillViewport="true">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:textColor="@color/neros"
+                                android:gravity="center"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/zeroscommesse"
+                                android:fontFamily="@font/cb"
+                                >
+                            </TextView>
+                            <ListView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/listviewScommesse"
+                                >
+                            </ListView>
+                        </RelativeLayout>
+                    </ScrollView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

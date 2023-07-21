@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.OtherViews.PaginaSplash">
+
+    <com.gjiazhe.panoramaimageview.PanoramaImageView
+        android:id="@+id/ciao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:piv_enablePanoramaMode="true"
+        app:piv_show_scrollbar="false"
+        app:piv_invertScrollDirection="false" />
+
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/palla"
+        />
+
+</RelativeLayout>

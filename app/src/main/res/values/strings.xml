@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">OneForYou</string>
+
+
+    <string-array name="colori">
+        <item>COLORE</item>
+        <item>AZZURRO</item>
+        <item>BLU</item>
+        <item>VIOLA</item>
+        <item>GRANATA</item>
+        <item>ROSSO</item>
+        <item>ARANCIONE</item>
+        <item>GIALLO</item>
+        <item>VERDE</item>
+        <item>BIANCO</item>
+        <item>NERO</item>
+    </string-array>
+
+    <string-array name="marchi">
+        <item>Netflix</item>
+        <item>Spotify</item>
+        <item>NowTv</item>
+        <item>Amazon</item>
+        <item>Dazn</item>
+        <item>PlayStore</item>
+    </string-array>
+</resources>

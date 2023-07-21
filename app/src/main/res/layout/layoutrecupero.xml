@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.OtherViews.PaginaRecuperoPassword">
+
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_centerInParent="true"
+        android:background="@drawable/login"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondoinizialeverticale">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondoinizialeorizzontale">
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fittizio"
+        >
+    </TextView>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_below="@id/fittizio"
+        android:background="#55ffffff"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sfondodati">
+
+        <TextView
+            android:id="@+id/digita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Digita il campo richiesto:"
+            android:fontFamily="@font/cb"
+            android:layout_marginTop="2.5dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/chiaro"
+            android:shadowRadius="9"
+            android:shadowColor="@color/scuro"
+            android:shadowDx="1"
+            android:shadowDy="1"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/digita"
+            android:id="@+id/scelta"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sceltomail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:textColor="@color/scuro"
+                    android:button="@drawable/emailb"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="@font/cb"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="  E-MAIL" />
+
+                <RadioButton
+                    android:id="@+id/sceltotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:button="@drawable/telefono"
+                    android:layoutDirection="rtl"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cb"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="2dp"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="CELL  "
+                    android:textColor="@color/scuro"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/inseriscimail"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:letterSpacing="0.25"
+            android:textCursorDrawable="@drawable/matita2"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:hint="EMAIL"
+            android:imeOptions="actionDone"
+            android:textColor="@color/scuro"
+            android:fontFamily="@font/cb"
+            android:layout_below="@id/scelta"
+            android:background="@drawable/edittextcentro" />
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="indirizzo di posta elettronica"
+            android:layout_marginTop="2.5dp"
+            android:layout_below="@id/inseriscimail"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            android:fontFamily="@font/cb"
+            android:textColor="@color/chiaro"
+            android:shadowRadius="9"
+            android:shadowColor="@color/scuro"
+            android:shadowDx="1"
+            android:shadowDy="1"/>
+
+        <EditText
+            android:id="@+id/inseriscitel"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:inputType="number"
+            android:letterSpacing="0.25"
+            android:textCursorDrawable="@drawable/matita2"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:hint="TELEFONO"
+            android:imeOptions="actionDone"
+            android:textColor="@color/scuro"
+            android:fontFamily="@font/cb"
+            android:layout_below="@id/scelta"
+            android:background="@drawable/edittextcentro" />
+
+        <TextView
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:text="numero di telefono cellulare"
+            android:layout_marginTop="2.5dp"
+            android:layout_below="@id/inseriscitel"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            android:textColor="@color/chiaro"
+            android:shadowRadius="9"
+            android:shadowColor="@color/scuro"
+            android:shadowDx="1"
+            android:fontFamily="@font/cb"
+            android:shadowDy="1"/>
+
+        <TextView
+            android:id="@+id/istruzioni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Riceverai le istruzioni per procedere"
+            android:layout_marginTop="2.5dp"
+            android:layout_below="@id/mail"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:textColor="@color/chiaro"
+            android:shadowRadius="9"
+            android:shadowColor="@color/scuro"
+            android:shadowDx="1"
+            android:fontFamily="@font/cb"
+            android:shadowDy="1"/>
+
+        <Button
+            android:id="@+id/recuperiamo"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/scuro"
+            android:layout_below="@+id/istruzioni"
+            android:layout_centerHorizontal="true"
+            android:onClick="recuperoAccesso"
+            android:background="@drawable/arc"
+            android:text="RECUPERA!" />
+
+
+
+    </RelativeLayout>
+
+
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/palla"
+        android:layout_below="@id/fittizio"
+        android:layout_height="75dp"
+        android:layout_width="75dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finto"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/sfondodati"></TextView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewUser.PaginaPremiUtente">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:fontFamily="@font/cr"
+            android:textSize="18dp"
+            android:text="USERNAME" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_below="@id/username"
+            android:layout_toEndOf="@id/immagine"
+            android:id="@+id/saldo"
+            android:textSize="18dp"
+            android:fontFamily="@font/cr"
+            android:text="SALDO" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/barramenu"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centrovuoto"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce2"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce2a"
+                android:onClick="passasezione"
+                android:background="@drawable/statistiche1"
+                >
+
+            </Button>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce1"
+            android:layout_toLeftOf="@id/voce2"
+            android:onClick="passasezione"
+            android:layout_marginRight="5dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/voce1a"
+                android:background="@drawable/gioca1"
+                >
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:onClick="passasezione"
+            android:id="@+id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/voce3a"
+                android:background="@drawable/amici1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/voce4"
+            android:onClick="passasezione"
+            android:layout_toRightOf="@id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/premi"
+                android:onClick="passasezione"
+                android:id="@+id/voce4a"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="75dp"
+        android:layout_below="@id/app"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coupon"
+            >
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:id="@+id/tableRow0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/rossocc"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   NETFLIX"
+                            android:id="@+id/netflix"
+                            android:fontFamily="@font/cb"
+                        >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10€   "
+                            android:id="@+id/netflixprezzo"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="5000"
+                            android:textSize="15dp"
+                            android:background="@color/rossos"
+                            android:textColor="@color/biancos"
+                            android:id="@+id/netflixfunnies"
+                            android:onClick="compraGift"
+                            android:layout_below="@id/netflix"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </Button>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/verdecc"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   SPOTIFY"
+                            android:id="@+id/spotify"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10€   "
+                            android:id="@+id/spotifyprezzo"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="7000"
+                            android:textSize="15dp"
+                            android:background="@color/verdes"
+                            android:textColor="@color/biancos"
+                            android:id="@+id/spotifyfunnies"
+                            android:onClick="compraGift"
+                            android:layout_below="@id/spotify"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </Button>
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/violacc"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   NOWTV"
+                            android:id="@+id/nowtv"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10€   "
+                            android:id="@+id/nowtvprezzo"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="9000"
+                            android:textSize="15dp"
+                            android:background="@color/violas"
+                            android:textColor="@color/biancos"
+                            android:id="@+id/nowtvfunnies"
+                            android:onClick="compraGift"
+                            android:layout_below="@id/nowtv"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </Button>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/arancionecc"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   AMAZON"
+                            android:id="@+id/amazon"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10€   "
+                            android:id="@+id/amazonprezzo"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="7000"
+                            android:textSize="15dp"
+                            android:background="@color/aranciones"
+                            android:textColor="@color/biancos"
+                            android:onClick="compraGift"
+                            android:id="@+id/amazonfunnies"
+                            android:layout_below="@id/amazon"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </Button>
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/biancocc"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   DAZN"
+                            android:id="@+id/dazn"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10€   "
+                            android:id="@+id/daznprezzo"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="6000"
+                            android:textSize="15dp"
+                            android:background="@color/neros"
+                            android:textColor="@color/biancos"
+                            android:onClick="compraGift"
+                            android:id="@+id/daznfunnies"
+                            android:layout_below="@id/dazn"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </Button>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/azzurrocc"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   PLAYSTORE"
+                            android:id="@+id/playstore"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10€   "
+                            android:id="@+id/playstoreprezzo"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </TextView>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="5000"
+                            android:textSize="15dp"
+                            android:background="@color/azzurros"
+                            android:textColor="@color/biancos"
+                            android:id="@+id/playstorefunnies"
+                            android:onClick="compraGift"
+                            android:layout_below="@id/playstore"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/cb"
+                            >
+                        </Button>
+
+
+                    </RelativeLayout>
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coupon"
+            android:id="@+id/storico"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/cb"
+            android:text="STORICO ACQUISTI"
+            android:layout_centerHorizontal="true"
+            >
+
+        </TextView>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/storico"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textColor="@color/neros"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/zerocoupon"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listviewCoupon"
+                    >
+                </ListView>
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

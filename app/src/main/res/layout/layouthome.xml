@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/prova"
+    tools:context=".View.ViewUser.PaginaHome">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:text="USERNAME"
+            android:textColor="@color/scuro"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/username"
+            android:layout_alignEnd="@id/username"
+            android:onClick="esci"
+            android:scaleType="fitXY"
+            android:src="@drawable/exit" />
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/username"
+            android:layout_toLeftOf="@id/logout"
+            android:scaleType="fitXY" />
+
+
+        <TextView
+            android:id="@+id/saldo"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="SALDO"
+            android:textColor="@color/scuro"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/recensioni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saldo"
+            android:text="RECENSIONI"
+            android:textColor="@color/scuro" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/scuro"
+            android:text="SEGUACI"
+            android:layout_below="@id/saldo"
+            android:layout_toRightOf="@id/recensioni"
+            android:id="@+id/seguaci"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/scuro"
+            android:text="MEDIA"
+            android:layout_below="@id/recensioni"
+            android:id="@+id/media"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/scuro"
+            android:text="VINTE"
+            android:layout_below="@id/recensioni"
+            android:layout_toRightOf="@id/media"
+            android:id="@+id/vinte"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/scuro"
+            android:text="SCOMMESSE"
+            android:layout_below="@id/recensioni"
+            android:layout_toRightOf="@id/vinte"
+            android:id="@+id/scommess"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_below="@id/app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/gioca"
+                android:layout_width="0dp"
+                android:onClick="passasezione"
+                android:layout_height="match_parent"
+                android:background="@drawable/pulsantimenu"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="passasezione"
+                    android:id="@+id/gioca0"
+                    android:layout_centerInParent="true"
+                    >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/gioca"
+                    android:alpha="0.5"
+                    android:onClick="passasezione"
+                    android:id="@+id/butpa"
+                    >
+                </Button>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/butpa"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0dp"
+                        android:text="GIOCA"
+                        android:fontFamily="@font/cb"
+                        android:textColor="@color/scuro"
+                        android:textSize="25dp"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/stats"
+                android:layout_width="0dp"
+                android:onClick="passasezione"
+                android:layout_height="fill_parent"
+                android:background="@drawable/pulsantimenu"
+                android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/stats0"
+                android:layout_centerInParent="true"
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/statistiche"
+                    android:onClick="passasezione"
+                    android:alpha="0.5"
+                    android:id="@+id/butsc"
+                    >
+                </Button>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/butsc"
+                    android:textColor="@color/scuro"
+                    android:fontFamily="@font/cb"
+                    android:text="STATS">
+                </TextView>
+
+            </RelativeLayout>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/amici"
+                android:layout_height="fill_parent"
+                android:onClick="passasezione"
+                android:background="@drawable/pulsantimenu"
+                android:layout_weight="1" >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/amici0"
+                android:layout_centerInParent="true"
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/amici"
+                    android:onClick="passasezione"
+                    android:alpha="0.5"
+                    android:id="@+id/butut"
+                    >
+                </Button>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/butut"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/cb"
+                    android:textColor="@color/scuro"
+                    android:text="UTENTI">
+                </TextView>
+
+            </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/premi"
+                android:layout_height="fill_parent"
+                android:onClick="passasezione"
+                android:background="@drawable/pulsantimenu"
+                android:layout_weight="1" >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/premi0"
+                android:layout_centerInParent="true"
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/premi"
+                    android:onClick="passasezione"
+                    android:alpha="0.5"
+                    android:id="@+id/butpr"
+                    >
+                </Button>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/butpr"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/cb"
+                    android:textColor="@color/scuro"
+                    android:text="PREMI">
+                </TextView>
+            </RelativeLayout>
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

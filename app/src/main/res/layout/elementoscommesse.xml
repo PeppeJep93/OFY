@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/riga">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/squadre"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/squadra1"
+            android:background="@color/blucc"
+            android:text="AAAAAAAAAA"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:fontFamily="@font/cb"
+            >
+        </TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/squadra2"
+            android:background="@color/rossocc"
+            android:text="BBBBBBBBB"
+            android:layout_weight="1"
+            android:fontFamily="@font/cb"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/squadre"
+        android:text="DATA"
+        android:fontFamily="@font/cb"
+        android:id="@+id/datascommessa"
+        >
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:id="@+id/simbolo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/datascommessa"
+        android:background="@color/bluc"
+        >
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/datascommessa"
+        android:text="PRONO: "
+        android:fontFamily="@font/cb"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/prono"
+        >
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/datascommessa"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/cb"
+        android:text="ESITO: "
+        android:id="@+id/esito"
+        >
+
+    </TextView>
+</RelativeLayout>

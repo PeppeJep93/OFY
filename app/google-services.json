@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "917430754857",
+    "firebase_url": "https://oneforyou-pd.firebaseio.com",
+    "project_id": "oneforyou-pd",
+    "storage_bucket": "oneforyou-pd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917430754857:android:ed56fbfeba05e5f6",
+        "android_client_info": {
+          "package_name": "oneforyou.jep.oneforyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917430754857-m4qnfbs7bk7og50eq2q6eei1r9k4rnee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "oneforyou.jep.oneforyou",
+            "certificate_hash": "35a4c82cb21ed6b13ef21c16076ee0f36d16328a"
+          }
+        },
+        {
+          "client_id": "917430754857-9cl4u6qeg575prsq9tj48rstocqno6eg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyfELCXZK06H8PAfS1OcT1k588twV7bcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917430754857-9cl4u6qeg575prsq9tj48rstocqno6eg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

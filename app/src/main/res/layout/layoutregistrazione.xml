@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.OtherViews.PaginaRegistrazione">
+
+    <pl.droidsonroids.gif.GifTextView
+        android:background="@drawable/login"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondoinizialeverticale">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondoinizialeorizzontale">
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fittizio"
+        >
+    </TextView>
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/sfondodati"> -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fittizio"
+        android:layout_marginTop="100dp"
+        android:id="@+id/scrolling"
+        android:fillViewport="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="#55ffffff"
+            android:layout_centerInParent="true"
+            android:id="@+id/sfondodati">
+
+            <TextView
+                android:id="@+id/sopraform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Inserisci qui i tuoi dati"
+                android:layout_marginTop="2.5dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:shadowRadius="9"
+                android:shadowColor="@color/scuro"
+                android:shadowDx="1"
+                android:shadowDy="1"/>
+
+            <EditText
+                android:id="@+id/dgtuser"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/sopraform"
+                android:textCursorDrawable="@drawable/matita2"
+                android:layout_centerInParent="true"
+                android:letterSpacing="0.25"
+                android:layout_marginTop="7.5dp"
+                android:focusable="true"
+                android:background="@drawable/edittextsopra"
+                android:fontFamily="monospace"
+                android:hint="USERNAME"
+                android:textColor="@color/scuro"
+                android:nextFocusForward="@id/dgtpass1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/controllouser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dgtuser"
+                android:layout_marginTop="-4dp"
+                android:text="5-15 CARATTERI"
+                android:textColor="@color/scuro"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/controllouser2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/controllouser"
+                android:layout_marginTop="-10dp"
+                android:text="SOLO LETTERE E NUMERI"
+                android:textColor="@color/scuro"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:visibility="gone"/>
+
+
+            <EditText
+                android:id="@+id/dgtpass1"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dgtuser"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:textCursorDrawable="@drawable/matita2"
+                android:textColor="@color/scuro"
+                android:letterSpacing="0.25"
+                android:background="@drawable/edittextcentro"
+                android:fontFamily="monospace"
+                android:hint="PASSWORD"
+                android:nextFocusForward="@+id/dgtemail"
+                android:singleLine="true"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/controllopass1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="5-15 LETTERE"
+                android:textColor="@color/scuro"
+                android:layout_below="@id/dgtpass1"
+                android:textAlignment="center"
+                android:layout_marginTop="-4dp"
+                android:textSize="14dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/controllopassa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="CON NUMERO E MAIUSCOLA"
+                android:textColor="@color/scuro"
+                android:layout_below="@id/controllopass1"
+                android:textAlignment="center"
+                android:layout_marginTop="-10dp"
+                android:textSize="14dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/nonvedi"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:onClick="showhide"
+                android:textColor="@color/scuro"
+                android:layout_below="@id/dgtpass1"
+                android:id="@+id/occhio"/>
+
+            <TextView
+                android:id="@+id/controllopass2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="TAP OCCHIO"
+                android:textColor="@color/scuro"
+                android:layout_above="@id/dgtpass2"
+                android:textAlignment="center"
+                android:layout_marginTop="-9dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/controllopassb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="VISUALIZZA"
+                android:textColor="@color/scuro"
+                android:layout_below="@id/controllopass2"
+                android:layout_marginTop="-10dp"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/dgtpass2"
+                android:layout_width="250dp"
+                android:letterSpacing="0.25"
+                android:layout_height="35dp"
+                android:layout_below="@+id/occhio"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:textCursorDrawable="@drawable/matita2"
+                android:background="@drawable/edittextcentro"
+                android:fontFamily="monospace"
+                android:hint="CONFERMA"
+                android:textColor="@color/scuro"
+                android:nextFocusForward="@+id/dgtemail"
+                android:singleLine="true"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:id="@+id/dgtemail"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:inputType="textEmailAddress"
+                android:layout_below="@+id/dgtpass2"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.25"
+                android:background="@drawable/edittextcentro"
+                android:fontFamily="monospace"
+                android:textCursorDrawable="@drawable/matita2"
+                android:hint="EMAIL"
+                android:textColor="@color/scuro"
+                android:nextFocusForward="@+id/dgttelefono"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/dgttelefono"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dgtemail"
+                android:layout_centerInParent="true"
+                android:inputType="number"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.25"
+                android:textCursorDrawable="@drawable/matita2"
+                android:background="@drawable/edittextcentro"
+                android:fontFamily="monospace"
+                android:hint="TELEFONO"
+                android:nextFocusForward="@+id/dgtnome"
+                android:singleLine="true"
+                android:textColor="@color/scuro"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/dgtnome"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dgttelefono"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.25"
+                android:textCursorDrawable="@drawable/matita2"
+                android:textColor="@color/scuro"
+                android:background="@drawable/edittextcentro"
+                android:fontFamily="monospace"
+                android:hint="NOME"
+                android:nextFocusForward="@+id/dgtcognome"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/dgtcognome"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dgtnome"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittextcentro"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.25"
+                android:textCursorDrawable="@drawable/matita2"
+                android:hint="COGNOME"
+                android:textColor="@color/scuro"
+                android:nextFocusForward="@+id/dgtcognome"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/dgtcognome"
+                android:id="@+id/sex">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/maschio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:textColor="@color/scuro"
+                        android:button="@drawable/sessoscelto"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="UOMO ♂" />
+
+                    <RadioButton
+                        android:id="@+id/femmina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:button="@drawable/sessoscelto"
+                        android:layoutDirection="rtl"
+                        android:layout_weight="1"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="2dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="♀ DONNA"
+                        android:textColor="@color/scuro"
+                        android:textSize="16dp" />
+                    </RelativeLayout>
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/dgtluogo"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/sex"
+                android:textCursorDrawable="@drawable/matita2"
+                android:layout_centerInParent="true"
+                android:background="@drawable/edittextcentro"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.25"
+                android:hint="CITTA' NASCITA"
+                android:textColor="@color/scuro"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:imeOptions="actionDone"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/datanascita"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/dgtluogo"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittextsotto"
+                android:text="DATA NASCITA"
+                android:letterSpacing="0.25"
+                android:textAlignment="center"
+                android:textColor="@color/scuro"
+                android:textSize="20dp" />
+
+
+            <Spinner
+                android:id="@+id/colorchoose"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/datanascita"
+                android:layout_marginTop="50dp"
+                android:entries="@array/colori"
+                android:background="@drawable/edittextcentro"
+                android:textSize="10dp"
+                android:theme="@style/SpinnerTheme"
+                android:letterSpacing="0.25"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/scuro"
+                android:spinnerMode="dialog"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opzionali"
+                android:text="opzionali"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/cl"
+                android:layout_below="@id/colorchoose"
+                />
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerInParent="true"
+                android:textSize="20dp"
+                android:visibility="visible"
+                android:onClick="prendifoto"
+                android:textColor="@color/scuro"
+                android:text="FOTO"
+                android:layout_below="@id/opzionali"
+                android:background="@drawable/edittextcentro"
+                android:id="@+id/immagine"/>
+
+
+            <ImageView
+                android:id="@+id/profilo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:onClick="prendifoto"
+                android:layout_below="@id/immagine"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="50dp"
+                />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:textSize="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/immagine"
+                android:layout_marginBottom="25dp"
+                android:layout_centerHorizontal="true"
+                android:text="ISCRIVITI"
+                android:background="@drawable/arc"
+                android:onClick="provapost"
+                android:id="@+id/post"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/palla"
+        android:layout_below="@id/fittizio"
+        android:layout_height="75dp"
+        android:layout_width="75dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finto"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/scrolling"></TextView>
+
+
+
+</RelativeLayout>

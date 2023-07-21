@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewUser.PaginaUtentiUtente">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:fontFamily="@font/cr"
+            android:textSize="18dp"
+            android:text="USERNAME" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_below="@id/username"
+            android:layout_toEndOf="@id/immagine"
+            android:id="@+id/saldo"
+            android:textSize="18dp"
+            android:fontFamily="@font/cr"
+            android:text="SALDO" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/socialutente"
+        android:layout_width="match_parent"
+        android:layout_below="@id/app"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="vediListaFollowers"
+                android:gravity="center"
+                android:id="@+id/infofollow"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="followers"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtFollowers"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/followers"
+                    android:layout_below="@id/txtFollowers"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ivf"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="followers"
+                    android:layout_below="@id/ivf"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nFollowers"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inforec"
+                android:onClick="vediListaRecensioni"
+                android:gravity="center"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="recensioni"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtRecensioni"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/recensioni"
+                    android:layout_below="@id/txtRecensioni"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ivr"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="recensioni"
+                    android:layout_below="@id/ivr"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nRecensioni"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="vediListaAmici"
+                android:gravity="center"
+                android:id="@+id/infoamici"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="amici"
+                    android:id="@+id/txtAmici"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/amicizie"
+                    android:layout_below="@id/txtAmici"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iva"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amici"
+                    android:layout_below="@id/iva"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nAmici"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="vediListaPreferiti"
+                android:gravity="center"
+                android:id="@+id/infopreferiti"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="preferiti"
+                    android:id="@+id/txtPreferiti"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/preferiti"
+                    android:layout_below="@id/txtPreferiti"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ivp"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="preferiti"
+                    android:layout_below="@id/ivp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nPreferiti"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/socialutente"
+        >
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/barraricerca">
+
+    <Button
+        android:id="@+id/casellacerca"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="-409dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/noncercalente"
+        android:onClick="effettuaRicerca"></Button>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/scrivicerca"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:hint="Effettua una ricerca..."
+        android:textColorHint="#B1B1B1"
+        android:layout_toLeftOf="@id/casellacerca"
+        android:fontFamily="@font/cr"
+        >
+    </EditText>
+
+</RelativeLayout>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/barraricerca"
+            android:layout_marginBottom="75dp"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                  <ListView
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:id="@+id/listviewListaUtenti"
+                    >
+                   </ListView>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/barramenu"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centrovuoto"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce2"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce2a"
+                android:onClick="passasezione"
+                android:background="@drawable/statistiche1"
+                >
+
+            </Button>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce1"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/voce2"
+            android:layout_marginRight="5dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce1a"
+                android:onClick="passasezione"
+                android:background="@drawable/gioca1"
+                >
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:onClick="passasezione"
+            android:id="@+id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/amici"
+                android:id="@+id/voce3a"
+                android:onClick="passasezione"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/voce4"
+            android:onClick="passasezione"
+            android:layout_toRightOf="@id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/premi1"
+                android:id="@+id/voce4a"
+                android:onClick="passasezione"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+
+</RelativeLayout>

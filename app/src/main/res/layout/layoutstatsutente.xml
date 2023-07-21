@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewUser.PaginaStatsUtente">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:fontFamily="@font/cr"
+            android:textSize="18dp"
+            android:text="USERNAME" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textColor="@color/scuro"
+            android:layout_below="@id/username"
+            android:layout_toEndOf="@id/immagine"
+            android:id="@+id/saldo"
+            android:textSize="18dp"
+            android:fontFamily="@font/cr"
+            android:text="SALDO" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/barramenu"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centrovuoto"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce2"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce2a"
+                android:onClick="passasezione"
+                android:background="@drawable/statistiche"
+                >
+
+            </Button>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/voce1"
+            android:onClick="passasezione"
+            android:layout_toLeftOf="@id/voce2"
+            android:layout_marginRight="5dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce1a"
+                android:onClick="passasezione"
+                android:background="@drawable/gioca1"
+                >
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:id="@+id/voce3"
+            android:onClick="passasezione">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/voce3a"
+                android:onClick="passasezione"
+                android:background="@drawable/amici1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/voce4"
+            android:onClick="passasezione"
+            android:layout_toRightOf="@id/voce3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/voce4a"
+                android:background="@drawable/premi1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+    <RelativeLayout
+        android:id="@+id/scommesseutente"
+        android:layout_width="match_parent"
+        android:layout_below="@id/app"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="vediVinte"
+                android:gravity="center"
+                android:id="@+id/infovinte"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="vinte"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtvinte"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/vinta"
+                    android:layout_below="@id/txtvinte"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ivf"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="vinte"
+                    android:layout_below="@id/ivf"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nVinte"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infonulle"
+                android:onClick="vediNulle"
+                android:gravity="center"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nulle"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtnulle"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/annullata"
+                    android:layout_below="@id/txtnulle"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ivr"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nulle"
+                    android:layout_below="@id/ivr"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nNulle"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="vediPerse"
+                android:gravity="center"
+                android:id="@+id/infoperse"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="perse"
+                    android:id="@+id/txtperse"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/persa"
+                    android:layout_below="@id/txtperse"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iva"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="perse"
+                    android:layout_below="@id/iva"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nperse"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="vediAttive"
+                android:gravity="center"
+                android:id="@+id/infoAttive"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="attive"
+                    android:id="@+id/txtAttive"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/attesa"
+                    android:layout_below="@id/txtAttive"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ivl"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="attive"
+                    android:layout_below="@id/ivl"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/nattive"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="vediTutte"
+                android:gravity="center"
+                android:id="@+id/infoTutte"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="tutte"
+                    android:id="@+id/txttutte"
+                    android:fontFamily="@font/cr"
+                    >
+                </TextView>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/preferiti"
+                    android:layout_below="@id/txttutte"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ivp"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tutte"
+                    android:layout_below="@id/ivp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/ntutte"
+                    android:fontFamily="@font/cb"
+                    >
+                </TextView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scommesseutente"
+        android:layout_marginBottom="75dp"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/neros"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:id="@+id/zeroscommesse"
+                android:fontFamily="@font/cb"
+                >
+            </TextView>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listviewScommesse"
+                >
+            </ListView>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

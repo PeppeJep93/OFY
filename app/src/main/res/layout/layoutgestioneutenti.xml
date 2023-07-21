@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewAdmin.PaginaGestioneUtenti">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/scuro"
+            android:fontFamily="@font/cb"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:textSize="20dp"
+            android:text="USERNAME" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/barramenusotto"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/centrovuoto"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="25dp"
+            android:onClick="passasezione"
+            android:id="@+id/buttonpartite1"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonpartite2"
+                android:background="@drawable/calendario1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:onClick="passasezione"
+            android:id="@+id/buttonutenti1"
+            android:layout_marginRight="25dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonutenti2"
+                android:background="@drawable/utenti"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/regalocrediti"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/app"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/regalarecrediti">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:id="@+id/domanda"
+                android:gravity="center_vertical"
+                android:text="QUANTI CREDITI VUOI REGALARE?"
+                android:textColorHint="#B1B1B1"
+                android:fontFamily="@font/cb"
+                >
+            </TextView>
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/scrivinumero"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:gravity="center_vertical"
+                android:layout_centerHorizontal="true"
+                android:hint="funs"
+                android:textSize="16dp"
+                android:inputType="number"
+                android:layout_toRightOf="@id/domanda"
+                android:textColorHint="#B1B1B1"
+                android:fontFamily="@font/cr"
+                >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/regala"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/gift"
+                android:gravity="center_vertical"
+                android:onClick="regalacrediti">
+
+            </ImageView>
+
+
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regalarecrediti"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/barraricerca">
+
+            <Button
+                android:id="@+id/casellacerca"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/noncercalente"
+                android:onClick="effettuaRicerca">
+
+            </Button>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/scrivicerca"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:hint="Effettua una ricerca..."
+                android:textColorHint="#B1B1B1"
+                android:layout_toLeftOf="@id/casellacerca"
+                android:fontFamily="@font/cr"
+                >
+            </EditText>
+
+        </RelativeLayout>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/barraricerca"
+            android:layout_marginBottom="85dp"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listviewGestioneUtenti"
+                    >
+                </ListView>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

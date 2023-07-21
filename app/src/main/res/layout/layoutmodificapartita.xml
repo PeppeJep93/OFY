@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prova"
+    tools:context=".View.ViewAdmin.PaginaModificaPartita">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="profilo"
+        android:id="@+id/utente"
+        >
+
+        <ImageView
+            android:id="@+id/immagine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            android:onClick="esci"
+            android:layout_alignEnd="@id/username"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cb"
+            android:textColor="@color/scuro"
+            android:layout_toRightOf="@id/immagine"
+            android:id="@+id/username"
+            android:textSize="20dp"
+            android:text="USERNAME" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app"
+        android:id="@+id/info"
+        android:layout_marginBottom="100dp"
+        >
+
+            <EditText
+                android:hint="Casa"
+                android:id="@+id/squadracasa"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/cb"
+                android:textSize="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                >
+            </EditText>
+
+            <EditText
+                android:hint="Ospite"
+                android:id="@+id/squadraospite"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/cb"
+                android:gravity="right"
+                android:textSize="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+            </EditText>
+
+
+            <Spinner
+                android:id="@+id/colorecasa"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/squadracasa">
+            </Spinner>
+
+            <Spinner
+                android:layout_below="@id/squadraospite"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:id="@+id/coloreospite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quote"
+            android:layout_below="@id/coloreospite">
+
+            <EditText
+                android:id="@+id/quotacasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="1"
+                android:fontFamily="@font/cb"
+                android:inputType="number"
+                android:textSize="36dp"
+                android:gravity="center"
+                android:layout_below="@id/coloreospite"
+                android:layout_weight="1"
+                >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/quotapareggio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:hint="X"
+                android:fontFamily="@font/cb"
+                android:inputType="number"
+                android:textSize="36dp"
+                android:layout_weight="1"
+                android:layout_below="@id/coloreospite">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/quotaospite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:fontFamily="@font/cb"
+                android:hint="2"
+                android:layout_weight="1"
+                android:layout_below="@id/coloreospite"
+                >
+            </EditText>
+
+        </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/orario"
+                android:layout_below="@id/quote">
+
+            <Button
+                android:id="@+id/datapartita"
+                android:layout_width="wrap_content"
+                android:background="@color/neros"
+                android:textColor="@color/biancos"
+                android:textSize="24dp"
+                android:fontFamily="@font/cb"
+                android:layout_height="wrap_content">
+            </Button>
+
+                <EditText
+
+                    android:id="@+id/orapartita"
+                    android:hint="HH"
+                    android:fontFamily="@font/cb"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datapartita"
+                    android:layout_alignLeft="@id/datapartita"
+                    />
+
+                <EditText
+
+                    android:id="@+id/minutipartita"
+                    android:hint="MM"
+                    android:inputType="number"
+                    android:fontFamily="@font/cb"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datapartita"
+                    android:layout_alignRight="@id/datapartita"
+                    />
+
+
+            </RelativeLayout>
+
+
+        <Button
+            android:text="AGGIORNA INFORMAZIONI"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottoneOK"
+            android:onClick="aggiornadati"
+            android:fontFamily="@font/cb"
+            android:layout_width="match_parent"
+            android:textSize="26dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottoneOK"
+            android:inputType="number"
+            android:id="@+id/golcasa"
+            android:gravity="left"
+            android:fontFamily="@font/cb"
+            android:layout_alignStart="@id/orario"
+            android:textSize="36dp"
+            android:hint="C"
+            >
+
+        </EditText>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottoneOK"
+            android:layout_alignEnd="@id/orario"
+            android:inputType="number"
+            android:gravity="right"
+            android:fontFamily="@font/cb"
+            android:id="@+id/golospite"
+            android:textSize="36dp"
+            android:hint="O"
+            >
+        </EditText>
+
+            </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/barramenusotto"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/centrovuoto"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="25dp"
+            android:onClick="passasezione"
+            android:id="@+id/buttonpartite1"
+            android:layout_toLeftOf="@id/centrovuoto">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonpartite2"
+                android:background="@drawable/calendario"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/centrovuoto"
+            android:onClick="passasezione"
+            android:id="@+id/buttonutenti1"
+            android:layout_marginRight="25dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="passasezione"
+                android:id="@+id/buttonutenti2"
+                android:background="@drawable/utenti1"
+                >
+
+            </Button>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="© 2019 OneForYou"
+        android:id="@+id/app"
+        android:layout_below="@id/utente"
+        ></TextView>
+
+
+</RelativeLayout>
